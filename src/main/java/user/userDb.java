@@ -30,6 +30,20 @@ public class userDb {
         return 1;
     }
 
+    //Insert method that takes Strings as parameters
+    public int insert(String username, String password) {
+        if(head == null) {
+            head = new userNode(username, password);
+            return 0;
+        }
+
+        userNode newNode = new userNode(username, password);
+        newNode.setNext(this.head);
+        this.head = newNode;
+
+        return 1;
+    }
+
     //Displays the users of database
     public void display() {
         userNode current = head;

@@ -12,5 +12,11 @@ public class userDbTest {
 
     @Test
     public void display() {
+        userDb testDb = new userDb();
+        testDb.insert("user1", "password");
+        testDb.insert("user2", "password2");
+        testDb.insert("user3", "password3");
+
+        testDb.display();
     }
 }
