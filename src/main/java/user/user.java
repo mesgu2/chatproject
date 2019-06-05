@@ -58,7 +58,8 @@ public class user {
     //Displays the user information
     public void display() {
         System.out.println("Username: "  + this.username);
-        System.out.print("Hashed Password: " + this.password);
+        System.out.println("Hashed Password: " + this.password);
+        System.out.println("=======================");
     }
 
 }
