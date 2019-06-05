@@ -9,11 +9,27 @@ public class user {
     public final String username;
     public final String password;
 
+    //default constructor
+    public user() {
+        this.username = "guest";
+        this.password = getMd5("password");
+    }
+
+    //parameterized constructor
     public user(String username, String password) {
         this.username = username;
         this.password = getMd5(password);
     }
 
+    //Returns the username of the user class
+    public String getUsername() {
+        return this.username;
+    }
+
+    //Returns the hashed password of the user class
+    public String getPassword() {
+        return this.password;
+    }
 
    //Creates an md5 hash of a given String
     public static String getMd5(String input)
@@ -37,6 +53,12 @@ public class user {
         {
             throw new RuntimeException(e);
         }
+    }
+
+    //Displays the user information
+    public void display() {
+        System.out.println("Username: "  + this.username);
+        System.out.print("Hashed Password: " + this.password);
     }
 
 }
