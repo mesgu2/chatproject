@@ -1,9 +1,15 @@
+
+/*
+Author: Montana Esguerra
+Class: CS 300
+Filename: user.java
+ */
+
 package user;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Scanner;
 
 public class user {
     public final String username;
