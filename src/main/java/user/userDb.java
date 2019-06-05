@@ -25,10 +25,14 @@ public class userDb {
             return 0;
         }
 
+
+        /*
+        FIXME Currently, this database accepts duplicates
         //Checks first if the username is already in the database
-        if(findUser(to_insert.data.username) == null) {
+        if(findUser(to_insert.data.username).username.compareTo("don'tPickThis") == 0) {
             return 1;
         }
+        */
 
         userNode newNode = new userNode(to_insert.data.username, to_insert.data.password);
         newNode.setNext(this.head);
@@ -44,10 +48,12 @@ public class userDb {
             return 0;
         }
 
+        /* FIXME Currently, this database accepts duplicates
         //Checks first if the username is already in the database
-        if(findUser(username) == null) {
+        if(this.findUser(username).username.compareTo("don'tPickThis") == 0 ) {
             return 1;
         }
+        */
 
         userNode newNode = new userNode(username, password);
         newNode.setNext(this.head);
@@ -61,15 +67,19 @@ public class userDb {
     public user findUser(String username) {
         userNode current = head;
 
+        user result = new user("don'tPickThis", "password");
+
         while(current != null) {
             if(username.compareTo(current.data.username) == 0) {
-                return current.data;
+
+                result.username = current.data.username;
+                result.password = current.data.password;
             }
 
             current = current.getNext();
         }
 
-        return null;
+        return result;
     }
 
     //Displays the users of database

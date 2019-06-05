@@ -12,8 +12,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class user {
-    public final String username;
-    public final String password;
+    public String username;
+    public String password;
 
     //default constructor
     public user() {
