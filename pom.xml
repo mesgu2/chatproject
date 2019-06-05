@@ -49,8 +49,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-      import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;          <executions>
+                <executions>
                     <execution>
                         <phase>package</phase>
                         <goals>
