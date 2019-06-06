@@ -7,7 +7,7 @@
 
 # Summary
 
-This project is a chat application that consists of a server and allows for an indefinite number of users to login and begin chatting with other users. This application will allows users to register accounts and login.
+This project is a chat application that consists of a server and allows for an indefinite number of users to login and begin chatting with other users. This application allows users to register accounts and login.
 Once logged in, users can broadcast messages to all online users or direct message users from a list of users.
 The chat supports time stamps, user login notification, and the ability to grab a copy of their chat history.
 
