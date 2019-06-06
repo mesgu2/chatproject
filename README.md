@@ -25,3 +25,16 @@ The chat supports time stamps, user login notification, and the ability to grab 
 
 ## Popup Login that links to a Register Page
 ![loginPopUp](/loginPopUp.png)
+
+# Known Faults
+
+* Login currently provides no form of authentication
+* Every user that connects will be named mario
+* User List does not scale properly for all screen types
+
+# TO DO
+* Create a register page
+* Implement get chat history feature
+* Implement register feature
+* Implement direct messaging
+* Implement logout button
