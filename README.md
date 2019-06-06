@@ -19,3 +19,9 @@ The chat supports time stamps, user login notification, and the ability to grab 
 * Timestamped messages
 * Login Notifications
 * Chat History
+
+# Login Page
+![loginPage](/chatAppLogin.png)
+
+## Popup Login that links to a Register Page
+![loginPopUp](/loginPopUp.png)
