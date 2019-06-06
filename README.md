@@ -11,6 +11,9 @@ This project is a chat application that consists of a server and allows for an i
 Once logged in, users can broadcast messages to all online users or direct message users from a list of users.
 The chat supports time stamps, user login notification, and the ability to grab a copy of their chat history.
 
+This project was written in Java and built on top of the Javalin framework. Checkout their site for tutorials on how to 
+get started with Javalin [Javalin](https://javalin.io/tutorials)
+
 # Features
 * Register account
 * Login
