@@ -3,6 +3,8 @@
 
 ### NOTICE: This project leans heavily on tutorials provided by David Ase (tipsy) Checkout his project at https://github.com/tipsy/javalin-websocket-example
 
+![ChatAppDemo](/chatAppDemo.png)
+
 # Summary
 
 This project is a chat application that consists of a server and allows for an indefinite number of users to login and begin chatting with other users. This application will allows users to register accounts and login.
