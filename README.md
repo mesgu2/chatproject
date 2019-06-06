@@ -41,3 +41,10 @@ get started with [Javalin](https://javalin.io/tutorials)
 * Implement register feature
 * Implement direct messaging
 * Implement logout button
+
+# Demo
+Want to try out my current build? Please feel free to clone my repository.
+## Steps
+* Build and run chatApp.java
+* Open a browser and go to http://localhost:7000
+* Enjoy trying it out!
