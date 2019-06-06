@@ -12,7 +12,7 @@ Once logged in, users can broadcast messages to all online users or direct messa
 The chat supports time stamps, user login notification, and the ability to grab a copy of their chat history.
 
 This project was written in Java and built on top of the Javalin framework. Checkout their site for tutorials on how to 
-get started with Javalin [Javalin](https://javalin.io/tutorials)
+get started with [Javalin](https://javalin.io/tutorials)
 
 # Features
 * Register account
