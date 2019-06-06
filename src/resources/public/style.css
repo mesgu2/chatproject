@@ -3,6 +3,7 @@
 }
 
 body {
+    background: #2c2f33
     font: 14px monospace;
     max-width: 480px;
     margin: 0 auto;
@@ -29,10 +30,10 @@ li {
 
 #userlist {
     position: fixed;
-    left: 50%;
+    right: 90%;
     list-style: none;
     margin: 0 0 0 250px;
-    background: #eee;
+    background: #7289da;
     padding: 5px 10px;
     width: 150px;
     top: 30px;
@@ -51,7 +52,8 @@ li {
 }
 
 #chat article {
-    background: #eee;
+    background: #99aab5;
+    border-left-color: 	#ffffff;
     padding: 10px;
     margin: 10px 0;
     border-left: 5px solid #aaa;
@@ -60,8 +62,8 @@ li {
 }
 
 #chat article:first-of-type {
-    background: #c9edc3;
-    border-left-color: #74a377;
+    background: #7289da;
+    border-left-color: 	#ffffff;
     animation: enter .2s 1;
 }
 

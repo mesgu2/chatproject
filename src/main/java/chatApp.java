@@ -1,5 +1,9 @@
+import io.javalin.Context;
 import io.javalin.Javalin;
 import io.javalin.websocket.WsSession;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -7,7 +11,9 @@ import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.eclipse.jetty.websocket.api.Session;
+import org.eclipse.jetty.server.session.SessionData;
+import org.eclipse.jetty.server.session.SessionHandler;
+import org.eclipse.jetty.websocket.api.*;
 import org.json.JSONObject;
 import static j2html.TagCreator.article;
 import static j2html.TagCreator.attrs;
@@ -30,6 +36,16 @@ public class chatApp {
 
         userDb users = new userDb();
 
+        user user1 = new user("mario", "mario");
+        user user2 = new user("peach", "princess");
+        user user3 = new user("luigi", "they$e3MeR0l1inG");
+
+        /*
+        SessionHandler sh1 = new SessionHandler();
+        SessionData sd1 = new SessionData();
+        WsSession test1 = new WsSession("id", defaultSession, sh1, sd1,"example");
+        */
+
         //Sample users used for testing
         users.insert("mario", "mario");
         users.insert("peach", "princess");
@@ -41,6 +57,7 @@ public class chatApp {
                 .ws("/chat", wsHandler -> {
                     wsHandler.onConnect(session -> {
                         user newUser = new user("mario", "mario");
+                        session.send("session: " + session);
                         userList.put(session, newUser);
                         userNameList.put(session, newUser.username);
                         broadcastMessage("Server", (newUser.username + " joined the chat"));
@@ -87,7 +104,7 @@ public class chatApp {
     //Builds an html element with a sender name, a message, and a timestamp
     private static String createHtmlMessageFromSender(String sender, String message) {
         return article(
-                b(sender + " says"),
+                b(sender + " at "),
                 span(attrs(".timstamp"), new SimpleDateFormat("HH:mm:ss").format(new Date())),
                 p(message)
         ).render();
