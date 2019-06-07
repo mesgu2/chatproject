@@ -43,8 +43,9 @@ get started with [Javalin](https://javalin.io/tutorials)
 * Implement logout button
 
 # Demo
-Want to try out my current build? Please feel free to clone my repository.
+Want to try out my current build? Please feel free to clone my repository. I've also included a jar file which is located in /out.
+Run the jar and go to http://localhost:7000
 ## Steps
-* Build and run chatApp.java
+* Run chatproject.jar
 * Open a browser and go to http://localhost:7000
 * Enjoy trying it out!
